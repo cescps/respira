@@ -1,0 +1,37 @@
+  body {
+    overflow: hidden;
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+  }
+
+  div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: grey;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation-name: breathe;
+    animation-duration: 13s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+    cursor: pointer; /* Make it clear that the circle is clickable */
+  }
+
+  @keyframes breathe {
+    0% { transform: scale(1); background: #969e6b; }
+    25% { transform: scale(3); background: #BFDBF7; }
+    50% { transform: scale(3); background: #BFDBF7; }
+    100% { transform: scale(1); background: #969e6b; }
+  }
+
+  .paused {
+    animation-play-state: paused;
+  }
